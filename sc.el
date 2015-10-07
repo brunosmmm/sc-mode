@@ -11,18 +11,21 @@
   "SpecC keywords and other on top of cc-mode"
   :lighter " SpecC"
 
-  (font-lock-add-keywords nil
-                          '(("\\_<\\(try\\|interrupt\\|trap\\|par\\|fsm\\|pipe\\|notify\\|implements\\|range\\|timing\\|wait\\(for\\)?\\)\\_>" . font-lock-keyword-face)
+  ; define our keywords
+  (defvar thekwords)
+  (setq thekwords
+        '(("\\_<\\(try\\|interrupt\\|trap\\|par\\|fsm\\|pipe\\|notify\\|implements\\|range\\|timing\\|wait\\(for\\)?\\)\\_>" . font-lock-keyword-face)
                                         ; maybe it would be good to move some of those to builtin face to get extra emphasis
 
-                            ("\\_<\\(signal\\|buffered\\|piped\\|interface\\|behavior\\|channel\\|event\\)\\_>" . font-lock-type-face)
+          ("\\_<\\(signal\\|buffered\\|piped\\|interface\\|behavior\\|channel\\|event\\)\\_>" . font-lock-type-face)
                             ; bit type
-                            ("\\_<\\(bit\\)\\(\[[0-9+]:[0-9]+\]\\)?\\_>" 1 font-lock-type-face)
+          ("\\_<\\(bit\\)\\(\[[0-9+]:[0-9]+\]\\)?\\_>" 1 font-lock-type-face)
 
                             ;input / output declarations
-                            ("\\_<\\(in\\)?\\(out\\)?\\_>" . font-lock-builtin-face)
-                            )
-                          )
+          ("\\_<\\(in\\)?\\(out\\)?\\_>" . font-lock-builtin-face)
+          ))
+
+  (font-lock-add-keywords nil thekwords)
 
   ; force font lock
   (if (fboundp 'font-lock-flush)
