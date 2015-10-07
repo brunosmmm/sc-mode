@@ -25,9 +25,12 @@
           ("\\_<\\(in\\)?\\(out\\)?\\_>" . font-lock-builtin-face)
           ))
 
-  (font-lock-add-keywords nil thekwords)
+  (if sc-mode
+      (font-lock-add-keywords nil thekwords)
+    (font-lock-remove-keywords nil thekwords)
+    )
 
-  ; force font lock
+                                        ;update buffer
   (if (fboundp 'font-lock-flush)
       (font-lock-flush)
     (when font-lock-mode
