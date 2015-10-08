@@ -49,5 +49,5 @@
 ;;;###autoload
 (add-hook 'c-mode-common-hook 'check-and-load)
 
-(provide 'sc)
-;;; sc.el ends here
+(provide 'sc-mode)
+;;; sc-mode.el ends here
