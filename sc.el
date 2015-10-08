@@ -6,6 +6,12 @@
 (require 'font-lock)
 (require 'cc-mode)
 
+(defun check-and-load ()
+
+  ;;check that this is a SpecC file and if so load sc-mode
+  (when (string-match ".*\\.\\(sc\\|sh\\)$" buffer-file-name)
+    (sc-mode)))
+
 ;;;###autoload
 (define-minor-mode sc-mode
   "SpecC keywords and other on top of cc-mode"
@@ -38,6 +44,10 @@
         (font-lock-fontify-buffer))))
 
   )
+
+;; add C mode hook
+;;;###autoload
+(add-hook 'c-mode-common-hook 'check-and-load)
 
 (provide 'sc)
 ;;; sc.el ends here
