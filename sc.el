@@ -14,7 +14,7 @@
   ; define our keywords
   (defvar thekwords)
   (setq thekwords
-        '(("\\_<\\(try\\|interrupt\\|trap\\|par\\|fsm\\|pipe\\|notify\\|implements\\|range\\|timing\\|wait\\(for\\)?\\)\\_>" . font-lock-keyword-face)
+        '(("\\_<\\(import\\|try\\|interrupt\\|trap\\|par\\|fsm\\|pipe\\|notify\\|implements\\|range\\|timing\\|wait\\(for\\)?\\)\\_>" . font-lock-keyword-face)
                                         ; maybe it would be good to move some of those to builtin face to get extra emphasis
 
           ("\\_<\\(signal\\|buffered\\|piped\\|interface\\|behavior\\|channel\\|event\\)\\_>" . font-lock-type-face)
