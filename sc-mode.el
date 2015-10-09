@@ -28,7 +28,7 @@
                 ;; maybe it would be good to move some of those to builtin face to get extra emphasis
                 ("\\_<\\(signal\\|buffered\\|piped\\|interface\\|behavior\\|channel\\|event\\)\\_>" . font-lock-type-face)
                 ;; implements keyword (doesn't work)
-                ("\\_<implements\\_>" 1 font-lock-keyword-face)
+                ("\\_<implements\\_>" . font-lock-keyword-face)
                 ;; bit type
                 ("\\_<\\(bit\\)\\(\[[0-9+]:[0-9]+\]\\)?\\_>" 1 font-lock-type-face)
                 ;;input / output declarations
