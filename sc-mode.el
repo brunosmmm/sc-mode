@@ -1,5 +1,4 @@
-;;; sc-mode ---  Better syntax highlighting for SpecC
-;;; Commentary:
+;;; sc-mode.el ---  Better syntax highlighting for SpecC
 ;; Author: Bruno Morais <brunosmmm@gmail.com>
 
 ;;; Code:
