@@ -8,7 +8,7 @@
 (defun check-and-load () "Check if this is a SpecC file by looking at the file name and load sc-mode automatically."
 
   ;;check that this is a SpecC file and if so load sc-mode
-  (when (string-match ".*\\.\\(sc\\|sh\\)$" buffer-file-name)
+  (when (string-match ".*\\.\\(sc\\|sh\\|sx\\)$" buffer-file-name)
     (sc-mode)))
 
 ;;;###autoload
